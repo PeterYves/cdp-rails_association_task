@@ -3,4 +3,7 @@ class Order < ApplicationRecord
   belongs_to :address
   has_many :order_foods, dependent: :destroy
   has_many :foods, through: :order_foods, dependent: :destroy
+  has_many :italian_foods, through: :order_foods, dependent: :destroy
+  has_many :japanese_foods, through: :order_foods, dependent: :destroy
+  has_many :chinese_foods, through: :order_foods, dependent: :destroy
 end
